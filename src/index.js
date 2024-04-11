@@ -1,13 +1,73 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import MovieDetail from "./pages/MovieDetail";
+import MovieWatch from "./pages/MovieWatch";
+import NotFound from "./components/NotFound";
+import BackButton from "./components/BackButton";
+import MovieGallery from "./pages/MovieGallery";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+        <App />
+    ),
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/movie/:id",
+    element: (
+      <>
+        <BackButton />
+        <MovieDetail />
+      </>
+    ),
+    errorElement: <NotFound />,
+  },
+  {
+    path: "/watch/:id",
+    element: (
+      <>
+        <BackButton />
+        <MovieWatch />
+      </>
+    ),
+    errorElement: <NotFound />,
+  },
+  {
+    path: "gallery",
+    element: (
+      <>
+        <BackButton />
+        <MovieGallery />
+      </>
+    ),
+    errorElement: <NotFound />,
+  },
+  {
+    path: "favorites",
+    element: (
+      <>
+        <BackButton />
+        <MovieGallery />
+      </>
+    ),
+  },
+  {
+    path: "404",
+    element: <NotFound />,
+  }
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
