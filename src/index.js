@@ -10,6 +10,7 @@ import MovieWatch from "./pages/MovieWatch";
 import NotFound from "./components/NotFound";
 import BackButton from "./components/BackButton";
 import MovieGallery from "./pages/MovieGallery";
+import MovieSearch from "./pages/MovieSearch";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,27 @@ const router = createBrowserRouter([
         <MovieGallery />
       </>
     ),
+    errorElement: <NotFound />,
+  },
+  {
+    path: "search",
+    element: (
+      <>
+        <BackButton />
+        <MovieSearch />
+      </>
+    ),
+    errorElement: <NotFound />,
+  },
+  {
+    path: "search?q=:query",
+    element: (
+      <>
+        <BackButton />
+        <MovieSearch />
+      </>
+    ),
+    errorElement: <NotFound />,
   },
   {
     path: "404",

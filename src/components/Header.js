@@ -36,6 +36,7 @@ export default function Header() {
             </NavDropdown>
             <Filter />
             <Nav.Link href="/gallery">Galerie</Nav.Link>
+            <Nav.Link href="/search">Rechercher un film </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

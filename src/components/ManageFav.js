@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import Image from "react-bootstrap/Image";
 
 import Heart from "../assets/hearts-svgrepo-com.svg";
@@ -19,11 +19,6 @@ function IsInFavorites(Id) {
   return true;
 }
 
-function RefreshIcon(id) {
-  let image = IsInFavorites(id) ? BrokenHeart : Heart;
-  document.getElementById("img-heart-" + id).src = image;
-}
-
 function RegisterFavorite(Id) {
   let favoriteMovies = GetFavorites();
   if (IsInFavorites(Id)) {
@@ -32,11 +27,13 @@ function RegisterFavorite(Id) {
     favoriteMovies.push(Id);
   }
   localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));
-  RefreshIcon(Id);
 }
 
 export default function AddFavBtn({ movie }) {
-  let image = IsInFavorites(movie.id) ? BrokenHeart : Heart;
+  const [image, setImage] = useState(
+    IsInFavorites(movie.id) ? BrokenHeart : Heart
+  );
+
   return (
     <div
       className="position-absolute top-0 end-0"
@@ -49,6 +46,7 @@ export default function AddFavBtn({ movie }) {
         aria-label="Ajouter aux favoris"
         onClick={() => {
           RegisterFavorite(movie.id);
+          setImage(IsInFavorites(movie.id) ? BrokenHeart : Heart);
         }}
       >
         <span role="img" aria-label="heart">
