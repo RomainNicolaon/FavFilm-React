@@ -14,9 +14,7 @@ import MovieGallery from "./pages/MovieGallery";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-        <App />
-    ),
+    element: <App />,
     errorElement: <NotFound />,
   },
   {
@@ -61,7 +59,7 @@ const router = createBrowserRouter([
   {
     path: "404",
     element: <NotFound />,
-  }
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

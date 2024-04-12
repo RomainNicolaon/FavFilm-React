@@ -156,8 +156,8 @@ export default [
       "Dans une petite ville de Kyushu, une jeune fille de 17 ans, Suzume, rencontre un homme qui dit voyager afin de chercher une porte. Décidant de le suivre dans les montagnes, elle découvre une unique porte délabrée au milieu des ruines. Suzume tourne la poignée, et d'autres portes s'ouvrent alors aux quatre coins du Japon, laissant entrer toutes les catastrophes qu'elles renferment. L'homme est formel : toute porte ouverte doit être fermée. Suzume entame un périple en vue de toutes les refermer.",
     director: "Makoto Shinkai",
     postersUrl: [
-      "https://fr.web.img6.acsta.net/c_310_420/pictures/23/03/15/10/25/0882766.jpg",
       "https://www.manga-news.com/public/images/pix/dvd/4833/suzume-affiche-1.jpg",
+      "https://fr.web.img6.acsta.net/c_310_420/pictures/23/03/15/10/25/0882766.jpg",
     ],
   }
 ];

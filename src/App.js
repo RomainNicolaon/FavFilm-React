@@ -79,11 +79,15 @@ export default function App() {
               </p>
             </div>
           ) : null}
-          {EndMoviesData.map((movie) => (
-            <div className="col-md-4" key={movie.id}>
-              <Movie movie={movie} />
+          <div className="container px-4 text-center">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-6 g-4">
+              {EndMoviesData.map((movie) => (
+                <div className="d-flex justify-content-center " key={movie.id}>
+                  <Movie movie={movie} />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </>

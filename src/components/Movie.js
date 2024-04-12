@@ -20,13 +20,13 @@ export default function Movie({ movie }) {
   return (
     <Card
       key={movie.id}
-      className="my-3 card d-flex flex-column shadow px-0 py-3 w-75 position-relative"
+      className="my-3 card d-flex flex-column shadow px-0 py-3 position-relative w-100"
     >
       <AddFav movie={movie} />
       <Card.Img
         src={postersUrl}
         alt="affiche"
-        style={{ height: "300px", width: "100%" }}
+        style={{ height: "70%", width: "100%" }}
       />
       <Card.Body className="d-flex flex-column">
         <Card.Title
