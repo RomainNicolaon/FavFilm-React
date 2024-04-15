@@ -48,14 +48,14 @@ export default function MovieDetail() {
           <div>
             <p>Sorti le {movie.release_date}</p>
             <p>Par {movie.director}</p>
-            <a href={`/watch/${movie.id}`} className="btn btn-primary">
+            <a href={`/projects/Favfilm/watch/${movie.id}`} className="btn btn-primary">
               Voir le film
             </a>
 
             <div className="mt-3">
               {previousMovie ? (
                 <a
-                  href={`/movie/${previousMovie.id}`}
+                  href={`/projects/Favfilm/movie/${previousMovie.id}`}
                   className="btn btn-outline-primary mr-3 mb-3"
                 >
                   Fiche précédente
@@ -64,7 +64,7 @@ export default function MovieDetail() {
 
               {nextMovie ? (
                 <a
-                  href={`/movie/${nextMovie.id}`}
+                  href={`/projects/Favfilm/movie/${nextMovie.id}`}
                   className="btn btn-outline-primary"
                 >
                   Fiche suivante

@@ -14,12 +14,12 @@ import MovieSearch from "./pages/MovieSearch";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/projects/Favfilm/",
     element: <App />,
     errorElement: <NotFound />,
   },
   {
-    path: "/movie/:id",
+    path: "/projects/Favfilm/movie/:id",
     element: (
       <>
         <BackButton />
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "/watch/:id",
+    path: "/projects/Favfilm/watch/:id",
     element: (
       <>
         <BackButton />
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "gallery",
+    path: "/projects/Favfilm/gallery",
     element: (
       <>
         <BackButton />
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "favorites",
+    path: "/projects/Favfilm/favorites",
     element: (
       <>
         <BackButton />
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "search",
+    path: "/projects/Favfilm/search",
     element: (
       <>
         <BackButton />
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "search?q=:query",
+    path: "/projects/Favfilm/search?q=:query",
     element: (
       <>
         <BackButton />
@@ -79,7 +79,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
   },
   {
-    path: "404",
+    path: "/projects/Favfilm/404",
     element: <NotFound />,
   },
 ]);

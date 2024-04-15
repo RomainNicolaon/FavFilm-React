@@ -10,7 +10,7 @@ export default function NotFound() {
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>
-        <a href="/">Go back to the homepage</a>
+        <a href="/projects/Favfilm">Go back to the homepage</a>
       </p>
 
       <pre className="text-red">{error.stack}</pre>

@@ -35,7 +35,7 @@ export default function Watch() {
             <p>Sorti le {movie.release_date}</p>
             <p>Par {movie.director}</p>
           </div>
-          <a href={`/movie/${movie.id}`} className="btn btn-primary">
+          <a href={`/projects/Favfilm/movie/${movie.id}`} className="btn btn-primary">
             Retour à la fiche
           </a>
         </div>

@@ -22,21 +22,21 @@ export default function Header() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="/">FavFilms</Navbar.Brand>
+        <Navbar.Brand href="/projects/Favfilm">FavFilms</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Accueil</Nav.Link>
+            <Nav.Link href="/projects/Favfilm">Accueil</Nav.Link>
             <NavDropdown title="Recommandations" id="basic-nav-dropdown">
               {randomMovie.map((movie) => (
-                <NavDropdown.Item key={movie.id} href={`/movie/${movie.id}`}>
+                <NavDropdown.Item key={movie.id} href={`/projects/Favfilm/movie/${movie.id}`}>
                   {movie.title}
                 </NavDropdown.Item>
               ))}
             </NavDropdown>
             <Filter />
-            <Nav.Link href="/gallery">Galerie</Nav.Link>
-            <Nav.Link href="/search">Rechercher un film </Nav.Link>
+            <Nav.Link href="/projects/Favfilm/gallery">Galerie</Nav.Link>
+            <Nav.Link href="/projects/Favfilm/search">Rechercher un film </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

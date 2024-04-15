@@ -8,7 +8,7 @@ import MoviesData from "./data/movies";
 
 function ClearFavorites() {
   localStorage.setItem("favoriteMovies", "[]");
-  window.location.href = "/";
+  window.location.href = "/projects/Favfilm";
 }
 
 function SortMovies(filter) {

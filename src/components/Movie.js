@@ -44,7 +44,7 @@ export default function Movie({ movie }) {
             </Accordion.Item>
           </Accordion>
         </Card.Text>
-        <a href={`/movie/${movie.id}`} className="btn btn-primary mt-auto">
+        <a href={`/projects/Favfilm/movie/${movie.id}`} className="btn btn-primary mt-auto">
           Voir plus
         </a>
       </Card.Body>
