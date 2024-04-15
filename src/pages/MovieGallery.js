@@ -11,9 +11,9 @@ export default function Gallery() {
     movie.postersUrl.map((posterUrl) => postersUrl.push(posterUrl))
   );
   return (
-    <div className="w-25">
+    <div className="w-100">
       <Header />
-      <div className="container">
+      <div className="container w-25 py-5">
         <div className="row">
           <GalleryCarousel posterUrl={postersUrl} />
         </div>
